@@ -1,0 +1,17 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: boot
+  description: "標準電卓起動"
+  commands:
+    # app 起動
+    - name: exe_spawn
+      params:
+        exe_path: "calc.exe"
+        
+    # app 起動待ち
+    - name: wait_for_app
+      params:
+        name: "電卓"

@@ -1,0 +1,47 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: write_memo
+  description: "メモする"
+  commands:
+    # メモする
+    # - name: click
+    #   params:
+    #     xpath: "//Window[@Name=\"無題 - メモ帳\"][@ClassName=\"Notepad\"]/Document[@Name=\"テキスト エディター\"][@ClassName=\"Edit\"]"
+    - name: set_text
+      params:
+        xpath: "//Document[@Name=\"テキスト エディター\"][@ClassName=\"Edit\"]"
+        text: "これは自動実行のサンプル。\n"
+        after_key_event: enter
+    - name: set_text
+      params:
+        xpath: "//Document[@Name=\"テキスト エディター\"][@ClassName=\"Edit\"]"
+        text: "ファイルメニューやボタン操作も自由自在。\n"
+        after_key_event: enter
+    - name: set_text
+      params:
+        xpath: "//Document[@Name=\"テキスト エディター\"][@ClassName=\"Edit\"]"
+        text: "スクリーンキャプチャも自在に撮れる。\n"
+        after_key_event: enter
+    - name: set_text
+      params:
+        xpath: "//Document[@Name=\"テキスト エディター\"][@ClassName=\"Edit\"]"
+        text: "特定コントロールの内容のチェックもできる。\n"
+        after_key_event: enter
+    - name: set_text
+      params:
+        xpath: "//Document[@Name=\"テキスト エディター\"][@ClassName=\"Edit\"]"
+        text: "ただし、vb6時代のコントールとか\nchromeで実現されている独自コントールは\n制御できない場合がある。。。\v"
+        after_key_event: enter
+    - name: set_text
+      params:
+        xpath: "//Document[@Name=\"テキスト エディター\"][@ClassName=\"Edit\"]"
+        text: "標準的な .net framework なら特に問題なく制御可能と\n思われる。。。\n"
+        after_key_event: enter
+    - name: set_text
+      params:
+        xpath: "//Document[@Name=\"テキスト エディター\"][@ClassName=\"Edit\"]"
+        text: "これでデモは終了。\n"
+        after_key_event: enter

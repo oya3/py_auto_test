@@ -1,0 +1,58 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: operation_addition
+  description: "加算する"
+  commands:
+    # クリア(C)をクリック
+    - name: click
+      params:
+        xpath: "//Button[@AutomationId=\"clearButton\"][@Name=\"クリア\"]"
+    # 123 を入力
+    # 1
+    - name: click
+      params:
+        xpath: "//Button[@AutomationId=\"num1Button\"][@Name=\"1\"]"
+    # 2
+    - name: click
+      params:
+        xpath: "//Button[@AutomationId=\"num2Button\"][@Name=\"2\"]"
+    # 3
+    - name: click
+      params:
+        xpath: "//Button[@AutomationId=\"num3Button\"][@Name=\"3\"]"
+    
+    # 加算(+)クリック
+    - name: click
+      params:
+        xpath: "//Button[@AutomationId=\"plusButton\"][@Name=\"プラス\"]"
+    
+    # 123 を入力
+    # 1
+    - name: click
+      params:
+        xpath: "//Button[@AutomationId=\"num1Button\"][@Name=\"1\"]"
+    # 2
+    - name: click
+      params:
+        xpath: "//Button[@AutomationId=\"num2Button\"][@Name=\"2\"]"
+    # 3
+    - name: click
+      params:
+        xpath: "//Button[@AutomationId=\"num3Button\"][@Name=\"3\"]"
+    
+    # 演算(=)クリック
+    - name: click
+      params:
+        xpath: "//Button[@AutomationId=\"equalButton\"][@Name=\"等号\"]"
+
+    - name: assert_text
+      params:
+        xpath: "//Text[@AutomationId=\"CalculatorResults\"]"
+        target: "Name"
+        expected: "表示は 246 です"
+        # "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 ‎- 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Text[@AutomationId=\"CalculatorResults\"][@Name=\"表示は 0 です\"]"
+        # "/Pane[@Name=\"デスクトップ 1\"][@ClassName=\"#32769\"]/Window[@Name=\"電卓 ‎- 電卓\"][@ClassName=\"ApplicationFrameWindow\"]/Window[@Name=\"電卓\"][@ClassName=\"Windows.UI.Core.CoreWindow\"]/Group[@ClassName=\"LandmarkTarget\"]/Text[@AutomationId=\"CalculatorResults\"][@Name=\"表示は 246 です\"]"
+

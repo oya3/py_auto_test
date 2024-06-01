@@ -1,0 +1,22 @@
+# coding: utf-8
+content_type: screen_test_sequence
+content_version: 0.1
+
+contents:
+  name: shutdown
+  description: "notepad 終了処理"
+  commands:
+    # file メニュー表示させる
+    - name: click
+      params:
+        xpath: "//MenuBar[@AutomationId=\"MenuBar\"][@Name=\"アプリケーション\"]/MenuItem[@Name=\"ファイル(F)\"]"
+    # 終了選択
+    - name: click
+      params:
+        xpath: "//Menu[@Name=\"ファイル(F)\"][@ClassName=\"#32768\"]/MenuItem[@Name=\"メモ帳の終了(X)\"]"
+    # 終了ダイアログ 保存しない クリック
+    - name: click
+      params:
+        xpath: "//Window[@Name=\"メモ帳\"][@ClassName=\"#32770\"]/Button[starts-with(@AutomationId,\"CommandButton_\")][@Name=\"保存しない(N)\"]"
+
+

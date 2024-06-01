@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+screenshots/
+tools/inspect_win10.x64/
+tools/WinAppDriverUIRecorder
+.#*
