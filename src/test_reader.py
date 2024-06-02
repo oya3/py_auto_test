@@ -46,4 +46,3 @@ class TestReader:
                 self.sequences[contents['name']] = contents
             else:
                 raise ValueError(f"ERROR: unknown content_type: {body['content_type']}")
-                                                                                                                                        

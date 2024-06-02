@@ -139,7 +139,9 @@ class TestRunner:
                     os.makedirs(spath, exist_ok=True)
                     png_file = f"{command_index:03d}.png"
                     if self.screenshots_auto:
-                        self.driver.save_screenshot(os.path.join(spath, png_file))
+                        # https://stackoverflow.com/questions/8900073/webdriver-screenshot-in-python
+                        # self.driver.save_screenshot(os.path.join(spath, png_file))  # フルスクリーンショット
+                        self.app.screenshot(os.path.join(spath, png_file))  # アプリのみスクリーンショット
 
                 elif name == 'wait_for_form':
                     self.wait_for_form(params['xpath'])

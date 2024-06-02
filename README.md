@@ -89,6 +89,15 @@ $ poetry add --dev jedi flake8 importmagic autopep8 yapf black
 
 ```
 
+## 実行
+
+``` bash
+# メモ帳デモ
+$ python src/main.py "tests/notepad" "memo"
+# 電卓デモ
+$ python src/main.py "tests/calc" "arithmetic_operation"
+```
+
 # WinAppDriver.exeのインストールパス
 
 おそらく以下のパターンのどれか。
@@ -96,4 +105,19 @@ $ poetry add --dev jedi flake8 importmagic autopep8 yapf black
 - "C:\Program Files (x86)\Windows Application Driver\WinAppDriver.exe"
 - "C:\Program Files\Windows Application Driver\WinAppDriver.exe"
 
+# 参考URL
 
+- 公式ドキュメント
+  https://github.com/microsoft/WinAppDriver/tree/master/Docs
+    - release
+      https://github.com/microsoft/WinAppDriver/releases
+- pypi
+    - Appium-Python-Client 1.3.0
+      https://pypi.org/project/Appium-Python-Client/1.3.0/
+
+# 課題
+
+- 絶対xpathを指定するとelementが2回目から取得できない問題
+    たぶん、相対xpathにすることで対応できている様子（アプリケーションからのxpath指定にするだけ）
+    - How to use WinAppDriver to locate elements on Modal window of Modal window
+       https://stackoverflow.com/questions/67631773/how-to-use-winappdriver-to-locate-elements-on-modal-window-of-modal-window
