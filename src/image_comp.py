@@ -24,6 +24,9 @@ class ImageComp:
         # 画像を読み込む
         image1 = cv2.imread(self.image1_path)
         image2 = cv2.imread(self.image2_path)
+        # windows 側の問題のため上下左右の1ピクセル内側を取得する
+        image1 = image1[1:-1, 1:-1]
+        image2 = image2[1:-1, 1:-1]
 
         # # 差分画像を計算
         # diff = cv2.absdiff(image1, image2)
