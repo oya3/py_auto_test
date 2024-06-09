@@ -45,3 +45,5 @@ contents:
         xpath: "//Document[@Name=\"テキスト エディター\"][@ClassName=\"Edit\"]"
         text: "これでデモは終了。\n"
         after_key_event: enter
+    - name: screenshot
+      params:
