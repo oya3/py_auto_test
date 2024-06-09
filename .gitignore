@@ -4,3 +4,4 @@ screenshots/
 tools/inspect_win10.x64/
 tools/WinAppDriverUIRecorder
 .#*
+html_diff.html
